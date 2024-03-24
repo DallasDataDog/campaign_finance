@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    - name: COD_CAMPAIGN_FINANCE
+      description: Contains the data from the City of Dallas' campaign finance data. 
+      database: RAW
+      schema: COD_CAMPAIGN_FINANCE
+      tables:
+          - name: ALL_REPORT_RECORDS
