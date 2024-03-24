@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-    - name: Texas Ethics Commission Campaign Finance Files
+    - name: TEC_CAMPAIGN_FINANCE
       description: "Contributions - Schedules A/C. Files types: contribs_##.csv"
       database: RAW
       schema: CAMPAIGN_FINANCE
@@ -10,6 +10,14 @@ sources:
           columns: 
             - name: CONTRIBUTION_INFO_ID
               description: Unique id for contribution, primary key
+              tests:
+                - unique
+                - not_null
+        - name: CONTRIBUTIONS_PRE_ELECTION
+          description: Contributions associated to daily pre-election reports
+          columns:
+            - name: CONTRIBUTION_INFO_ID
+              description: unique ID for contriburion, primary key
               tests:
                 - unique
                 - not_null
@@ -23,5 +31,4 @@ sources:
                 tests:
                 - unique
                 - not_null
-                
 

@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+    - name: DCED_ELECTIONS
+      description: Candidates from dallas county, that appeared on the ballot of the 2023 primary and the primary results
+      database: RAW
+      schema: CAMPAIGN_FINANCE
+      tables:
+        - name: DALLAS_COUNTY_CANDIDATES
+          columns: 
+            - name: TEC_FILER_IDENT
+              description: Unique id for contribution, primary key
+              tests:
+                - unique
+                - not_null
