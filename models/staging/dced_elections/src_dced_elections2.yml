@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    - name: DCED_ELECTIONS
+      description: Election data from Dallas County Elections Department
+      database: RAW
+      schema: DCED_ELECTIONS
+      tables:
+        - name: DALLAS_ELECTION_RESULTS

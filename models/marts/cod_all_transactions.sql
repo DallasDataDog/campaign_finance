@@ -4,7 +4,12 @@ SELECT
     REPORT_ID,
     FILE_LINK,
     FULL_NAME,
-    CONTACT_TYPE,
+    CASE
+        WHEN CONTACT_TYPE = 'Contributor' THEN 'Contribution'
+        WHEN CONTACT_TYPE = 'Expenditure' THEN 'Expense'
+        WHEN CONTACT_TYPE = 'Lender' THEN 'Loan'
+        ELSE CONTACT_TYPE
+    END AS TRANSACTION_TYPE,
     RECORD_TYPE,
     AMOUNT,
     SCHEDULE_TYPE,
