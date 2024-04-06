@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: TEC_CAMPAIGN_FINANCE
+    description: "Contributions - Schedules A/C. Files types: contribs_##.csv"
+    database: RAW
+    schema: TEC_CAMPAIGN_FINANCE
+    tables:
+      - name: CONTRIBUTIONS
+        columns:
+          - name: CONTRIBUTION_INFO_ID
+            description: Unique id for contribution, primary key
+            tests:
+              - unique
+              - not_null
+      - name: CONTRIBUTIONS_PRE_ELECTION
+        description: Contributions associated to daily pre-election reports
+        columns:
+          - name: CONTRIBUTION_INFO_ID
+            description: unique ID for contriburion, primary key
+            tests:
+              - unique
+              - not_null
+      - name: FILER_INFO
+        description: Filer index. This table contains information about filers including names, addresses, and offices as entered by TEC staff from various sources.
+      - name: EXPENDITURES
+        description: Expenditures - Schedules F/G/H/I
+        columns:
+          - name: EXPEND_INFO_ID
+            description: Unique id for expenditure, primary key
+            tests:
+              - unique
+              - not_null

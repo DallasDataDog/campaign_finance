@@ -1,0 +1,14 @@
+with election_results AS (
+    SELECT *
+    FROM {{source("DCED_ELECTIONS","DALLAS_CITY_COUNCIL_ELECTIONS")}}
+)
+SELECT 
+    ELECTION,
+    DISTRICT,
+    TRIM(UPPER(CANDIDATE)) AS CANDIDATE_NAME,
+    INCUMBENT,
+    VOTES,
+    RESULT,
+    SOURCE_FILE_NAME,
+    LOAD_DATE
+FROM election_results

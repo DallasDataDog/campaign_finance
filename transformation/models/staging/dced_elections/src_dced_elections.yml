@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+    - name: DCED_ELECTIONS
+      description: Election data from Dallas County Elections Department
+      database: RAW
+      schema: DCED_ELECTIONS
+      tables:
+        - name: DALLAS_CITY_COUNCIL_ELECTIONS
+          description:  Dallas City Council Election candidates and results
+        - name: DALLAS_COUNTY_PRIMARY_ELECTIONS
+          description: 2023 dallas county primary candidates and results
+          columns: 
+            - name: TEC_FILER_IDENT
+              description: Unique id for contribution, primary key
+              tests:
+                - unique
+                - not_null

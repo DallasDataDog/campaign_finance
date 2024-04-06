@@ -1,0 +1,111 @@
+﻿Election,District,Candidate,Incumbent,Votes,Result
+2021-05-01,7,Adam Bazaldua,TRUE,1472,Runoff
+2021-06-05,7,Adam Bazaldua,TRUE,1787,Won
+2023-05-06,7,Adam Bazaldua,TRUE,1285,Won
+2023-05-06,1,Albert Mata,FALSE,1614,Lost
+2023-05-06,14,Amanda Schulz,FALSE,1845,Lost
+2023-05-06,3,August Doyle,FALSE,104,Lost
+2021-05-01,11,Barry Wernick,FALSE,3042,Runoff
+2021-06-05,11,Barry Wernick,FALSE,3790,Lost
+2023-05-06,10,Brian Hasenbauer,FALSE,1102,Lost
+2021-05-01,10,Byron McGough,TRUE,5827,Won
+2021-05-01,7,Calvin Johnson,FALSE,277,Lost
+2021-05-01,12,Cara Mendelsohn,TRUE,2613,Won
+2023-05-06,12,Cara Mendelsohn,TRUE,900,Won
+2021-05-01,4,Carolyn King Arnold,TRUE,1580,Runoff
+2021-06-05,4,Carolyn King Arnold,TRUE,1484,Won
+2023-05-06,4,Carolyn King Arnold,TRUE,1684,Won
+2021-05-01,3,Casey Thomas,TRUE,2531,Won
+2021-05-01,1,Chad West,TRUE,2088,Won
+2023-05-06,1,Chad West,TRUE,2132,Won
+2023-05-06,10,Christopher Carter,FALSE,642,Lost
+2021-05-01,13,Da'On Boulanger-Chatman,FALSE,325,Lost
+2021-05-01,8,Davante Peters,FALSE,155,Lost
+2023-05-06,8,Davante Peters,FALSE,78,Lost
+2021-05-01,14,David Blewett,TRUE,2871,Runoff
+2023-05-06,3,Denise Benavides,FALSE,317,Lost
+2021-05-01,7,Donald Parish,FALSE,551,Lost
+2021-05-01,6,Earl Thomas,FALSE,97,Lost
+2021-05-01,14,Elizabeth Viney,FALSE,1987,Lost
+2021-05-01,12,Elva Curl,FALSE,595,Lost
+2023-05-06,15,Eric Johnson,TRUE,43028,Won
+2023-05-06,1,Felix Griggs,FALSE,346,Lost
+2021-05-01,13,Gay Willis,FALSE,4039,Runoff
+2021-06-05,13,Gay Willis,FALSE,5248,Won
+2023-05-06,13,Gay Willis,TRUE,5228,Won
+2021-05-01,1,Gerardo Sanchez,FALSE,69,Lost
+2021-05-01,1,Giovanni Valderas,FALSE,1590,Lost
+2021-05-01,11,Hosanna Yemiru,FALSE,1565,Lost
+2021-05-01,3,Irby Foster,FALSE,551,Lost
+2021-05-01,7,Israel Varela,FALSE,426,Lost
+2021-05-01,5,Jaime Resendez,TRUE,1095,Won
+2023-05-06,5,Jaime Resendez,TRUE,865,Won
+2021-05-01,7,James Turknett,FALSE,47,Lost
+2023-05-06,4,Jamie Smith,FALSE,911,Lost
+2021-05-01,11,Jaynie Schultz,FALSE,2892,Runoff
+2021-06-05,11,Jaynie Schultz,FALSE,4443,Won
+2023-05-06,11,Jaynie Schultz,TRUE,3906,Won
+2021-05-01,2,Jennifer Cortez,FALSE,391,Lost
+2021-05-01,2,Jesus Moreno,FALSE,1347,Runoff
+2021-06-05,2,Jesus Moreno,FALSE,1611,Won
+2023-05-06,2,Jesus Moreno,TRUE,1857,Won
+2023-05-06,3,Joe Tave,FALSE,778,Runoff
+2023-06-10,3,Joe Tave,FALSE,638,Lost
+2021-05-01,9,John Botefuhr,FALSE,1150,Lost
+2023-05-06,3,John Sims,FALSE,424,Lost
+2021-05-01,4,Johnny Aguinaga,FALSE,182,Lost
+2023-05-06,14,Joseph Miller,FALSE,250,Lost
+2021-05-01,9,Judith Kumar,FALSE,1413,Lost
+2023-05-06,10,Kathy Stewart,FALSE,3883,Won
+2023-05-06,15,Kendal Richardson,FALSE,554,Lost
+2023-05-06,9,Kendra Madison,FALSE,948,Lost
+2021-05-01,7,Kevin Felder,FALSE,579,Runoff
+2021-06-05,7,Kevin Felder,FALSE,1035,Lost
+2021-05-01,8,Lakolya London,FALSE,94,Lost
+2021-05-01,13,Leland Burk,FALSE,4147,Runoff
+2021-06-05,13,Leland Burk,FALSE,4560,Lost
+2021-05-01,4,Lelani Russell,FALSE,90,Lost
+2021-05-01,13,Willard Smith,FALSE,723,Lost
+2023-05-06,7,Marvin Crenshaw,FALSE,150,Lost
+2023-05-06,11,Mary Candace Evans,FALSE,2755,Lost
+2021-05-01,11,Mary Candace Evans,FALSE,487,Lost
+2021-05-01,4,Matthew Canto,FALSE,282,Lost
+2021-05-01,4,Maxie Johnson,FALSE,1259,Runoff
+2021-06-05,4,Maxie Johnson,FALSE,1216,Lost
+2021-05-01,2,Michael Fetzer,FALSE,369,Lost
+2021-05-01,6,Monica R Alonzo,FALSE,438,Lost
+2023-05-06,6,Monica R Alonzo,FALSE,641,Lost
+2023-05-06,7,Okema Thomas,FALSE,69,Lost
+2021-05-01,6,Omar Narvaez,TRUE,1264,Won
+2023-05-06,6,Omar Narvaez,TRUE,894,Won
+2023-05-06,14,Paul Ridley,TRUE,3497,Won
+2021-05-01,14,Paul Ridley,FALSE,4079,Runoff
+2023-05-06,9,Paula Blackmon,TRUE,3721,Won
+2021-05-01,9,Paula Blackmon,TRUE,4381,Won
+2023-05-06,13,Priscilla Shacklett,FALSE,2562,Lost
+2021-05-01,2,Raha Assadi,FALSE,504,Lost
+2021-05-01,5,Ruth Torres,FALSE,151,Lost
+2021-05-01,13,Ryan Moore,FALSE,407,Lost
+2021-05-01,2,Sana Syed,FALSE,847,Runoff
+2021-06-05,2,Sana Syed,FALSE,1191,Lost
+2023-05-06,6,Sidney Robles Martinez,FALSE,72,Lost
+2021-05-01,10,Sirrano Keith Baldeo,FALSE,583,Lost
+2023-05-06,10,Sirrano Keith Baldeo,FALSE,93,Lost
+2021-05-01,1,Stephani Kyle ,FALSE,263,Lost
+2021-05-01,8,Subrina Brenham,FALSE,463,Lost
+2023-05-06,8,Subrina Brenham,FALSE,353,Lost
+2023-05-06,2,Sukhbir Kaur,FALSE,331,Lost
+2021-05-01,8,Tennell Atkins,TRUE,1983,Won
+2023-05-06,8,Tennell Atkins,TRUE,1585,Won
+2021-05-01,5,Terrance Perkins,FALSE,466,Lost
+2023-05-06,5,Terrance Perkins,FALSE,452,Lost
+2021-05-01,6,Tony Carrillo,FALSE,29,Lost
+2023-05-06,6,Tony Carrillo,FALSE,72,Lost
+2023-05-06,7,Tracy Dotie-Hill,FALSE,989,Lost
+2021-05-01,7,Tramonica Brown,FALSE,286,Lost
+2021-05-01,7,Walter Changa Higgins,FALSE,102,Lost
+2021-05-01,6,Wendi Macon,FALSE,423,Lost
+2021-05-01,5,Yolanda Williams,FALSE,405,Lost
+2023-05-06,5,Yolanda Williams,FALSE,296,Lost
+2023-05-06,3,Zarin Gracey,FALSE,1395,Runoff
+2023-06-10,3,Zarin Gracey,FALSE,1064,Won

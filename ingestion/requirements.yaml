@@ -1,0 +1,9 @@
+name: campfin-env
+channel: default
+dependencies:
+  - python==3.9
+  - pandas
+  - geopandas
+  - jupyter
+  - snowflake-connector-python
+  - setuptools

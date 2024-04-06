@@ -1,0 +1,11 @@
+authentication.yaml
+__pycache__
+.DS_Store
+
+#dbt 
+transformation/target/
+transformation/dbt_packages/
+transformation/logs/
+
+#data
+ingestion/state_data/seed/
