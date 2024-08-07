@@ -1,6 +1,7 @@
 authentication.yaml
 __pycache__
 .DS_Store
+.env
 
 #dbt 
 transformation/target/
