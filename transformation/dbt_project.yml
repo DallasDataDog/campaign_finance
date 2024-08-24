@@ -41,8 +41,12 @@ models:
         +database: CLEAN
         +schema: TEC_CAMPAIGN_FINANCE
     intermediate:
-      +database: ANALYTICS
-      +schema: INTERMEDIATE_MODELS
+      cod:
+        +database: ANALYTICS
+        +schema: INTERMEDIATE_MODELS
+      tec:
+        +database: ANALYTICS
+        +schema: INTERMEDIATE_MODELS
       
       
 
