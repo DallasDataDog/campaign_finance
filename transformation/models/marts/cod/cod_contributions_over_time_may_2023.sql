@@ -19,7 +19,7 @@ candidate_is_incumbent AS (
         RESULT,
         INCUMBENT AS IS_INCUMBENT,
         VOTES
-    FROM {{ref("cod_campaign_finance_records")}}
+    FROM {{ref("stg_dced__dallas_city_council_elections")}}
     WHERE ELECTION = '2023-05-06'
 ),
 race_has_incumbents AS (
