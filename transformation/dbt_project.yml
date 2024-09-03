@@ -33,7 +33,7 @@ models:
     staging:
       cod_open_data:
         +database: CLEAN
-        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'COD_CAMPAIGN_FINANCE' }}"
+        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'COD_OPEN_DATA' }}"
       dced_elections:
         +database: CLEAN
         +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'DCED_ELECTIONS' }}"
