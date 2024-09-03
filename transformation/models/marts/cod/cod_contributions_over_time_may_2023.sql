@@ -4,7 +4,7 @@ with fundraising_stats AS(
         SUBSTR(TRANSACTION_DATE,0,7) AS TRANSACTION_MONTH,
         SUM(AMOUNT)         AS MONEY_RAISED,
         COUNT(*)            AS NUMBER_OF_CONTRIBUTIONS
-    FROM {{ref("cod_all_transactions")}}
+    FROM {{ref("cod_campaign_finance_records")}}
     WHERE 
     (TRANSACTION_DATE BETWEEN '2021-07-01' AND '2023-05-06')
     AND TRANSACTION_TYPE = 'Contribution'

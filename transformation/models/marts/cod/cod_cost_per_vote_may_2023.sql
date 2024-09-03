@@ -3,7 +3,7 @@ with election_contributions_6months AS (
         CANDIDATE_NAME,
         SUM(AMOUNT)         AS MONEY_SPENT,
         COUNT(*)            AS NUMBER_OF_CONTRIBUTIONS
-    FROM {{ref("cod_all_transactions")}}
+    FROM {{ref("cod_campaign_finance_records")}}
     WHERE (TRANSACTION_DATE BETWEEN '2022-11-07' AND '2023-05-06') AND TRANSACTION_TYPE = 'Expense'
     GROUP BY CANDIDATE_NAME
 )
