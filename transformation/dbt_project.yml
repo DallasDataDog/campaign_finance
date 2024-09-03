@@ -31,24 +31,23 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   campaign_finance:
     staging:
-      cod_campaign_finance:
+      cod_open_data:
         +database: CLEAN
-        +schema: COD_CAMPAIGN_FINANCE
+        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'COD_CAMPAIGN_FINANCE' }}"
       dced_elections:
         +database: CLEAN
-        +schema: DCED_ELECTIONS
+        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'DCED_ELECTIONS' }}"
       tec_campaign_finance:
         +database: CLEAN
-        +schema: TEC_CAMPAIGN_FINANCE
+        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'TEC_CAMPAIGN_FINANCE' }}"
     intermediate:
-      cod:
+      cod_open_data:
         +database: ANALYTICS
-        +schema: INTERMEDIATE_MODELS
+        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'INTERMEDIATE_MODELS' }}"
       tec:
         +database: ANALYTICS
-        +schema: INTERMEDIATE_MODELS
-      
-      
+        +schema: "{{ 'dbt_dev' if env_var('DBT_ENVIRONMENT') == 'dev' else 'INTERMEDIATE_MODELS' }}"
+  
 
 # In dbt, the default materialization for a model is a view. This means, when you run 
 # dbt run or dbt build, all of your models will be built as a view in your data platform. 

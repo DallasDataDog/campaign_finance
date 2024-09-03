@@ -105,4 +105,4 @@ SELECT
     ZIPCODE,
     GEO_LOCATION_LATITUDE,
     GEO_LOCATION_LONGITUDE
-FROM {{ref("int_cod_dedup_all_report_records")}}
+FROM {{ref("int_cod_dedup_campaign_finance_records")}}
