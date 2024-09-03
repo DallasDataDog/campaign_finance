@@ -103,6 +103,5 @@ SELECT
     CITY,
     STATE,
     ZIPCODE,
-    GEO_LOCATION_LATITUDE,
-    GEO_LOCATION_LONGITUDE
+    CONCAT('(',GEO_LOCATION_LATITUDE,', ' ,GEO_LOCATION_LONGITUDE,')') as GEO_COORDINATES
 FROM {{ref("int_cod_dedup_campaign_finance_records")}}
