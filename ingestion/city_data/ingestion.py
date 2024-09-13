@@ -14,10 +14,11 @@ sys.path.append(os.environ.get('SNOWFLAKE_ADMIN_PATH'))
 import snowflake_utils as sf
 
 snowflake_config = {
-    "account_name" : os.environ.get('SNOWFLAKE_ACCOUNT'),
-    "user_name" : os.environ.get('SNOWFLAKE_USER'),
-    "role_name" : os.environ.get('SNOWFLAKE_ROLE'),
-    "private_key_path" : os.environ.get('SNOWFLAKE_PRIVATE_KEY_PATH')
+    "account_name"      : os.environ.get('SNOWFLAKE_ACCOUNT'),
+    "user_name"         : os.environ.get('SNOWFLAKE_USER'),
+    "role_name"         : os.environ.get('SNOWFLAKE_ROLE'),
+    "private_key_path"  : os.environ.get('SNOWFLAKE_PRIVATE_KEY_PATH'),
+    "private_key_pw"    : os.environ.get('SNOWFLAKE_PRIVATE_KEY_PW')
 }
 
 #setup logging
@@ -39,7 +40,7 @@ except Exception as e:
 #generating csv file, with max update date in its name
 df_camp_fin_records = pd.read_csv(io.StringIO(response_data.text))
 update_date = pd.to_datetime(df_camp_fin_records[':updated_at']).dt.strftime('%Y-%m-%d').max()
-output_file_name = "dallas_campaign_finance_{0}.csv".format(update_date)
+output_file_name = f"dallas_campaign_finance_{update_date}.csv"
 df_camp_fin_records.to_csv(current_dir / 'seed/' / output_file_name, quoting=csv.QUOTE_ALL ,index=False)
 logger.info(f"Created csv export with {len(df_camp_fin_records)} records")
 
@@ -55,7 +56,7 @@ with sf.sf_conn(snowflake_config) as conn:
             logger.info(result)
 
     #read file that contains file format ddl
-    with open(current_dir / 'file_format/ddl_csv_files.sql','r') as script:
+    with open(current_dir / 'file_format/ddl_cod_campaign_finance.sql','r') as script:
         file_format_ddl=io.StringIO(script.read())
     #execute DDL for file format creation
     for statement in conn.execute_stream(file_format_ddl):
@@ -63,16 +64,15 @@ with sf.sf_conn(snowflake_config) as conn:
             logger.info(result)
 
     #Uploading file(s) to stage
-    sf.file_to_stage(conn, current_dir / 'seed/', output_file_name, 'RAW.COD_CAMPAIGN_FINANCE.RAW_FILES')
+    sf.file_to_stage(conn, current_dir / 'seed/', 'dallas_campaign_finance_*.csv', 'RAW.COD_OPEN_DATA.RAW_FILES')
 
     #generate script for create table and copy into
-    with open(current_dir / 'tables/all_report_records.sql') as script:
+    with open(current_dir / 'tables/cod_campaign_finance_records.sql') as script:
         table_ddl_and_copy=io.StringIO(script.read())
     #execute create table and copy into
     for statement in conn.execute_stream(table_ddl_and_copy):
         for result in statement:
             logger.info(result)
-
 
 
 #Section for pagination of API, not used

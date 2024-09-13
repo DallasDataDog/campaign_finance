@@ -1,9 +1,10 @@
 version: 2
 
 sources:
-    - name: COD_CAMPAIGN_FINANCE
+    - name: COD_OPEN_DATA
       description: Contains the data from the City of Dallas' campaign finance data. 
       database: RAW
-      schema: COD_CAMPAIGN_FINANCE
+      schema: COD_OPEN_DATA
       tables:
-          - name: ALL_REPORT_RECORDS
+          - name: CAMPAIGN_FINANCE_RECORDS
+          - decription: Contains all transactions from the city of dallas Camapaign Finance dataset
