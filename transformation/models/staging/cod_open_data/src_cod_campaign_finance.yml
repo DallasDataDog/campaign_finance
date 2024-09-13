@@ -7,4 +7,3 @@ sources:
       schema: COD_OPEN_DATA
       tables:
           - name: CAMPAIGN_FINANCE_RECORDS
-          - decription: Contains all transactions from the city of dallas Camapaign Finance dataset
