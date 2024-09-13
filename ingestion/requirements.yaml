@@ -1,5 +1,4 @@
 name: campfin-env
-channel: default
 dependencies:
   - python==3.9
   - pandas
@@ -8,3 +7,7 @@ dependencies:
   - snowflake-connector-python
   - setuptools
   - python-dotenv
+  - pip
+  - pip:
+    - dbt-snowflake
+    - snowflake-connector-python[pandas]
