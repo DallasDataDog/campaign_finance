@@ -1,0 +1,17 @@
+with TOP_DONORS AS (
+    SELECT FULL_NAME
+    FROM {{ref("cod_campaign_finance_records")}}
+    WHERE TRANSACTION_TYPE = 'Contribution'
+    GROUP BY FULL_NAME
+    ORDER BY SUM(AMOUNT) DESC
+    LIMIT 1000
+),
+CANDIDATE_EXCLUSION AS (
+    SELECT DISTINCT CANDIDATE_NAME FROM {{ref("cod_campaign_finance_records")}}
+)
+SELECT *
+FROM {{ref("cod_campaign_finance_records")}} 
+WHERE 
+    FULL_NAME NOT IN (SELECT CANDIDATE_NAME FROM CANDIDATE_EXCLUSION)
+    AND FULL_NAME IN (SELECT FULL_NAME FROM TOP_DONORS)
+    AND TRANSACTION_TYPE = 'Contribution'
