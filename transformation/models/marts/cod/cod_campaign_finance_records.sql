@@ -89,6 +89,8 @@ SELECT
             'NICK VENGHAUS',
             'RICK PERDUE',
             'ROBERT LEE',
+            'ROSS PEROT',
+            'ROSS PEROT JR.',
             'RYAN CROW',
             'STEPHEN MILLER',
             'METROTEX ASSOCIATION OF REALTORS PAC',
