@@ -3,7 +3,8 @@ SELECT
     RECORD_ID,
     REPORT_ID,
     FILE_LINK,
-    FULL_NAME,
+    PARTY_NAME,
+    PARTY_TYPE,
     CASE
         WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CAROLYN KING ARNOLD' AND RECORD_TYPE = 'January 15: Semi-Annual 2023' AND TRANSACTION_DATE < '2024-07-01' THEN 'Contribution' --This an anomaly found in Carolyn King's records that report in-kind contributions as "Report Self"
 
@@ -28,8 +29,8 @@ SELECT
     END AS TRANSACTION_TYPE,
     RECORD_TYPE,
     CASE
-        WHEN FULL_NAME = 'MASTER CARD - CITI' AND CANDIDATE_NAME = 'CARA MENDELSOHN' THEN 0 --Cara Mendelsohn often pays her expenses with a credit card, those expenses should be listed as Expenditures made by Credit Card, so we need to exclude these charges as to not double count. I am making then 0.
-        WHEN FULL_NAME = 'CAPITAL ONE CREDIT CARDS' AND CANDIDATE_NAME = 'JUDITH KUMAR' THEN 0 
+        WHEN PARTY_NAME = 'MASTER CARD - CITI' AND CANDIDATE_NAME = 'CARA MENDELSOHN' THEN 0 --Cara Mendelsohn often pays her expenses with a credit card, those expenses should be listed as Expenditures made by Credit Card, so we need to exclude these charges as to not double count. I am making then 0.
+        WHEN PARTY_NAME = 'CAPITAL ONE CREDIT CARDS' AND CANDIDATE_NAME = 'JUDITH KUMAR' THEN 0 
         ELSE AMOUNT
     END AS AMOUNT,
     SCHEDULE_TYPE,
@@ -38,7 +39,7 @@ SELECT
     TRANSACTION_DATE,
     DATE_TRUNC('MONTH', DATE(TRANSACTION_DATE)) AS TRANSACTION_MONTH, 
     CASE
-        WHEN FULL_NAME IN (
+        WHEN PARTY_NAME IN (
             'ADAM MURPHY',
             'APARTMENT ASSOCIATION OF GREATER DALLAS PAC',
             'BRADLEY JOHNSON',
