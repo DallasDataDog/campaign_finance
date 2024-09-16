@@ -75,6 +75,7 @@ SELECT
             'KATY SLADE',
             'KEITH POMYKAL',
             'KIRK WILSON',
+            'LARKSPUR CAPITAL LP',
             'LELAND BURK',
             'LOU OLERIO',
             'LOUIS OLERIO',
