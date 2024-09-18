@@ -7,6 +7,4 @@
  )
     SELECT *
     FROM ALL_REPORT_RECORDS
-    WHERE ROW_NUM = 1 
-        AND CANDIDATE_NAME != 'COUNCIL MEMBER'
-        AND CONTACT_TYPE != 'Candidate / Committee'
+    WHERE ROW_NUM = 1
