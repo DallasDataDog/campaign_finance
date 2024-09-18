@@ -6,8 +6,8 @@ SELECT
     PARTY_NAME,
     PARTY_TYPE,
     CASE
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CAROLYN KING ARNOLD' AND RECORD_TYPE = 'January 15: Semi-Annual 2023'  THEN 'Contribution'       --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ALBERT MATA' THEN 'Contribution'                                                                 --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CAROLYN KING ARNOLD' AND RECORD_TYPE = 'January 15: Semi-Annual 2023'  THEN 'Contribution'        --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ALBERT MATA' THEN 'Contribution'                                                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
         WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'OMAR NARVAEZ'     AND RECORD_ID IN ('84998') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
         WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JUDITH KUMAR'     AND RECORD_ID IN ('68499') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
         WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'AMANDA SCHULZ'    AND RECORD_ID IN ('82519') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
@@ -114,3 +114,5 @@ SELECT
     ZIPCODE,
     CONCAT('(',GEO_LOCATION_LATITUDE,', ' ,GEO_LOCATION_LONGITUDE,')') as GEO_COORDINATES
 FROM {{ref("int_cod_dedup_campaign_finance_records")}}
+WHERE CANDIDATE_NAME != 'COUNCIL MEMBER'        --Filtering out these records as they appear to be some sort of test records
+    AND CONTACT_TYPE != 'Candidate / Committee' --Filtering out records that track the submissions of reports
