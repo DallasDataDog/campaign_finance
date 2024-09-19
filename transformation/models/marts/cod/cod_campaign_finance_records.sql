@@ -6,29 +6,39 @@ SELECT
     PARTY_NAME,
     PARTY_TYPE,
     CASE
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CAROLYN KING ARNOLD' AND RECORD_TYPE = 'January 15: Semi-Annual 2023'  THEN 'Contribution'        --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ALBERT MATA' THEN 'Contribution'                                                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'OMAR NARVAEZ'     AND RECORD_ID IN ('84998') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JUDITH KUMAR'     AND RECORD_ID IN ('68499') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'AMANDA SCHULZ'    AND RECORD_ID IN ('82519') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'FELIX GRIGGS'     AND RECORD_ID IN ('83047') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JOHNNY AGUINAGA'  AND RECORD_ID IN ('69807') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'MICHAEL FETZER'   AND RECORD_ID IN ('71802') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JAIME RESENDEZ'   AND RECORD_ID IN ('88004') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'RAHA ASSADI'      AND RECORD_ID IN ('69080') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'STEPHANI KYLE'    AND RECORD_ID IN ('71820') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'TRACY DOTIE-HILL' AND RECORD_ID IN ('83927') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'YOLANDA WILLIAMS' AND RECORD_ID IN ('87733') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ZARIN GRACEY'     AND RECORD_ID IN ('83840') THEN 'Contribution'                                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ISRAEL VARELA'    AND RECORD_ID IN ('67234','73587') THEN 'Contribution'                          --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'GAY WILLIS'       AND RECORD_ID IN ('70878','74828') THEN 'Contribution'                          --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CARA MENDELSOHN'  AND RECORD_ID IN ('79324','87703') THEN 'Contribution'                          --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'PAUL RIDLEY'      AND RECORD_ID IN ('76399','76760','84612','84226','87317') THEN 'Contribution'  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'LELAND BURK'      AND RECORD_ID IN ('73593','73347','73351') THEN 'Contribution'                  --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
-        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'PAULA BLACKMON'   AND RECORD_ID IN ('72813','72816','72814','72818') THEN 'Contribution'          --Correcting this record as it was an in-kind donation, that was incorrectly labled as "Report Itself"
+        --These records labeled as "Report Itself" when in fact they were in-kind contributions
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CAROLYN KING ARNOLD' AND RECORD_TYPE = 'January 15: Semi-Annual 2023'  THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ALBERT MATA' THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'OMAR NARVAEZ'     AND RECORD_ID IN ('84998') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JUDITH KUMAR'     AND RECORD_ID IN ('68499') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'AMANDA SCHULZ'    AND RECORD_ID IN ('82519') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'FELIX GRIGGS'     AND RECORD_ID IN ('83047') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JOHNNY AGUINAGA'  AND RECORD_ID IN ('69807') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'MICHAEL FETZER'   AND RECORD_ID IN ('71802') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'JAIME RESENDEZ'   AND RECORD_ID IN ('88004') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'RAHA ASSADI'      AND RECORD_ID IN ('69080') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'STEPHANI KYLE'    AND RECORD_ID IN ('71820') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'TRACY DOTIE-HILL' AND RECORD_ID IN ('83927') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'YOLANDA WILLIAMS' AND RECORD_ID IN ('87733') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ZARIN GRACEY'     AND RECORD_ID IN ('83840') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'ISRAEL VARELA'    AND RECORD_ID IN ('67234','73587') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'GAY WILLIS'       AND RECORD_ID IN ('70878','74828') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'CARA MENDELSOHN'  AND RECORD_ID IN ('79324','87703') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'PAUL RIDLEY'      AND RECORD_ID IN ('76399','76760','84612','84226','87317') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'LELAND BURK'      AND RECORD_ID IN ('73593','73347','73351') THEN 'Contribution'
+        WHEN SCHEDULE_TYPE ='Report Itself' AND UPPER(CANDIDATE_NAME) = 'PAULA BLACKMON'   AND RECORD_ID IN ('72813','72816','72814','72818') THEN 'Contribution'
+        
+        --These records labeled as "Report Itself" when in fact they were returns from investments made with political contributions
+        WHEN UPPER(CANDIDATE_NAME) = 'ERIC JOHNSON' AND SCHEDULE_TYPE = 'Credits' AND PARTY_NAME = 'LIBERTY CAPITAL BANK' THEN 'Interest/Gains From Investments'
+        WHEN UPPER(CANDIDATE_NAME) = 'PAUL RIDLEY'  AND RECORD_ID IN ('2047','2032') THEN 'Interest/Gains From Investments'
+        
+        --These records labeled as "Report Itself" when in fact they were investments made with political contributions
+        WHEN UPPER(CANDIDATE_NAME) = 'PAUL RIDLEY' AND RECORD_ID IN ('45851','45183') THEN 'Investments From Political Contributions'
+        
         WHEN CONTACT_TYPE  ='Contributor' THEN 'Contribution'
         WHEN CONTACT_TYPE  ='Expenditure' THEN 'Expense'
         WHEN CONTACT_TYPE  ='Lender' THEN 'Loan'
+        WHEN CONTACT_TYPE  ='Pledger' THEN 'Pledge'
         WHEN SCHEDULE_TYPE ='Report Itself' THEN 'Not Classified'
         ELSE CONTACT_TYPE
     END AS TRANSACTION_TYPE,
@@ -40,7 +50,8 @@ SELECT
     TRANSACTION_DATE,
     DATE_TRUNC('MONTH', DATE(TRANSACTION_DATE)) AS TRANSACTION_MONTH, 
     CASE
-        WHEN PARTY_NAME IN (
+        WHEN TRANSACTION_TYPE != 'Contribution' THEN NULL
+        WHEN TRANSACTION_TYPE = 'Contribution' AND PARTY_NAME IN (
             'ADAM MURPHY',
             'APARTMENT ASSOCIATION OF GREATER DALLAS PAC',
             'BRADLEY JOHNSON',
@@ -97,7 +108,7 @@ SELECT
             'RYAN CROW',
             'STEPHEN MILLER',
             'METROTEX ASSOCIATION OF REALTORS PAC',
-            'THE REAL ESTATE COUNCIL PAC (TRECPAC)',
+            'THE REAL ESTATE COUNCIL (TREC) PAC',
             'TEXAS ASSOCIATION OF REALTORS PAC (TREPAC)',
             'TIM BYRNE',
             'TODD PETTY',
